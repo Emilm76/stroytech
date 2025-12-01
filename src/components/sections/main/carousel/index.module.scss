@@ -1,0 +1,63 @@
+.section {
+  padding: 16px;
+  @media (min-width: 768px) {
+    padding: 20px;
+  }
+  @media (min-width: 1440px) {
+    height: 100vh;
+    min-height: 950px;
+    max-height: 1020px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  background: linear-gradient(175.32deg, #0371ff 3.75%, #2c90ff 23.15%, #4abaff 48.97%, #7dd6ff 67.63%, #d8f8ff 98.28%);
+  color: var(--color-white);
+  padding: 24px 0 20px;
+  height: 100%;
+  @media (min-width: 1440px) {
+    padding: 24px 0;
+  }
+  @media (min-width: 1600px) {
+    padding: 32px 0 24px;
+  }
+}
+
+.container {
+  max-width: 1244px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 14px;
+  flex-grow: 1;
+  @media (min-width: 768px) {
+    padding: 0 20px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 58px;
+  }
+}
+
+.logo {
+  margin: 0 auto;
+  width: 238px;
+  @media (min-width: 1024px) {
+    width: 273px;
+  }
+  @media (min-width: 1440px) {
+    width: 330px;
+  }
+}
+
+.title {
+  text-align: center;
+  margin-top: 118px;
+  @media (min-width: 768px) {
+    margin-top: 136px;
+  }
+  @media (min-width: 1440px) {
+    margin-top: 150px;
+  }
+}
