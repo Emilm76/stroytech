@@ -10,6 +10,7 @@
   --color-blue-light: #f0f7fb;
   --color-light: #f8f8f8;
   --color-grey: #dde2ed;
+  --color-grey-dark: #90969f;
 
   @media (min-width: 768px) {
     --container-padding-x: 40px;
@@ -37,11 +38,6 @@ footer,
 header,
 section {
   display: block;
-}
-
-html,
-body {
-  scrollbar-gutter: stable;
 }
 
 img,
@@ -157,8 +153,11 @@ ul[role='listbox'] {
 }
 
 html,
-body,
-.custom-scrollbar {
+body {
+  scrollbar-width: none;
+  // scrollbar-gutter: stable;
+}
+/*.custom-scrollbar {
   &::-webkit-scrollbar {
     background-color: var(--color-white);
     width: 4px;
@@ -175,7 +174,7 @@ body,
   // для firefox
   scrollbar-color: var(--color-light) var(--color-white);
   scrollbar-width: thin;
-}
+}*/
 
 main {
   overflow: hidden;
@@ -305,6 +304,40 @@ main {
 .embla__dot--selected {
   background-color: var(--color-blue);
 }
+.embla__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.embla__button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  circle {
+    fill: var(--color-black);
+    transition: fill 0.15s ease-out;
+  }
+  path {
+    fill: var(--color-white);
+    transition: fill 0.15s ease-out;
+  }
+  &:hover {
+    circle {
+      fill: var(--color-white);
+    }
+    path {
+      fill: var(--color-black);
+    }
+  }
+  &:disabled {
+    circle {
+      fill: rgba(255, 255, 255, 0.2);
+    }
+    path {
+      fill: var(--color-grey-dark);
+    }
+  }
+}
 
 .dotsLg {
   .dot {
@@ -319,4 +352,19 @@ main {
 
 .blue {
   color: var(--color-blue);
+}
+
+.link {
+  transition: color 0.15s ease-out;
+  &:hover {
+    color: var(--color-blue);
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 64px;
+  @media (min-width: 768px) {
+    margin-bottom: 72px;
+  }
 }

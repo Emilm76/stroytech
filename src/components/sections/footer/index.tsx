@@ -75,7 +75,8 @@ export function Footer() {
 
           <p className={styles.info}>
             <span>
-              © 2025 Группа компаний «ЮгСтройИнвест». <span className="blue">Все права защищены.</span>
+              © 2025 Группа компаний «ЮгСтройИнвест».{' '}
+              <span className="blue">Все&nbsp;права&nbsp;защищены.</span>
             </span>{' '}
             <span>Разработано в рамках корпоративного университета Стройтех.</span>
           </p>

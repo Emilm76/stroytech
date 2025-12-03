@@ -31,6 +31,7 @@ export const useDotButton = (emblaApi: EmblaCarouselType | undefined): UseDotBut
   useEffect(() => {
     if (!emblaApi) return
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     onInit(emblaApi)
     onSelect(emblaApi)
     emblaApi.on('reInit', onInit).on('reInit', onSelect).on('select', onSelect)
