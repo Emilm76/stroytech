@@ -40,10 +40,10 @@ export function Carousel({ slides }: { slides: Slide[] }) {
               <div className={clsx('embla__slideWrapper', styles.slideWrapper)}>
                 <LazyLoadImage
                   imgSrc={slide.img}
-                  alt=""
                   index={index}
                   inView={slidesInView.indexOf(index) > -1}
                   key={index}
+                  alt={`${slide.name}. ${slide.description}`}
                 />
                 <div className={styles.tag}>
                   <span>{slide.tag}</span>

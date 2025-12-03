@@ -8,7 +8,9 @@ type UseDotButtonType = {
   onDotButtonClick: (index: number) => void
 }
 
-export const useDotButton = (emblaApi: EmblaCarouselType | undefined): UseDotButtonType => {
+export const useDotButton = (
+  emblaApi: EmblaCarouselType | undefined
+): UseDotButtonType => {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
 
@@ -31,7 +33,7 @@ export const useDotButton = (emblaApi: EmblaCarouselType | undefined): UseDotBut
   useEffect(() => {
     if (!emblaApi) return
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
     onInit(emblaApi)
     onSelect(emblaApi)
     emblaApi.on('reInit', onInit).on('reInit', onSelect).on('select', onSelect)

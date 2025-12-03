@@ -1,0 +1,53 @@
+.slide {
+  --fCard-height: 356px;
+  position: relative;
+  height: var(--fCard-height);
+  border-radius: 24px;
+  overflow: hidden;
+  user-select: none;
+  @media (min-width: 768px) {
+    --fCard-height: 446px;
+  }
+  @media (min-width: 1440px) {
+    --fCard-height: 378px;
+  }
+}
+.slideHover {
+  .desc {
+    opacity: 1;
+  }
+}
+
+.slideContentWrap {
+}
+
+.slideContent {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.310201) 34.75%,
+    rgba(0, 0, 0, 0.50384) 73.74%,
+    rgba(0, 0, 0, 0.8) 145.28%
+  );
+  //backdrop-filter: blur(1px);
+  color: var(--color-white);
+  padding: 32px;
+  p {
+    padding-top: 16px;
+  }
+}
+
+.descWrap {
+  padding: 0;
+  height: 0;
+  transition: height 0.3s ease-out;
+}
+.desc {
+  font-size: 14px;
+  padding-top: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}

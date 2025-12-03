@@ -1,3 +1,4 @@
+import { FeaturesSection } from '@/components/sections/features'
 import { Footer } from '@/components/sections/footer'
 import { MainSection } from '@/components/sections/main'
 import { MentorsSection } from '@/components/sections/mentors'
@@ -9,6 +10,7 @@ export default function Home() {
       <ReactLenis root />
       <main>
         <MainSection />
+        <FeaturesSection />
         <MentorsSection />
       </main>
       <Footer />

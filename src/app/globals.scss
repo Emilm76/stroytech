@@ -280,11 +280,15 @@ main {
   }
 }
 
+b {
+  font-weight: 600;
+}
+
 // embla carousel
 .embla {
 }
 .embla__viewport {
-  overflow: hidden;
+  //overflow: hidden;
 }
 .embla__container {
   display: flex;
@@ -337,6 +341,23 @@ main {
       fill: var(--color-grey-dark);
     }
   }
+}
+.embla__progress {
+  border-radius: 15px;
+  background-color: var(--color-grey);
+  position: relative;
+  height: 11px;
+  width: 100%;
+  overflow: hidden;
+}
+.embla__progress__bar {
+  border-radius: 15px;
+  background-color: var(--color-black);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: -100%;
 }
 
 .dotsLg {

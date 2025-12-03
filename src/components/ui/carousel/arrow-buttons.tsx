@@ -1,4 +1,9 @@
-import React, { ComponentPropsWithRef, useCallback, useEffect, useState } from 'react'
+import React, {
+  ComponentPropsWithRef,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react'
 import { EmblaCarouselType } from 'embla-carousel'
 
 type UsePrevNextButtonsType = {
@@ -32,7 +37,7 @@ export const usePrevNextButtons = (
   useEffect(() => {
     if (!emblaApi) return
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
     onSelect(emblaApi)
     emblaApi.on('reInit', onSelect).on('select', onSelect)
   }, [emblaApi, onSelect])
@@ -59,7 +64,13 @@ export const PrevButton: React.FC<PropType> = (props) => {
         fill="none"
         viewBox="0 0 48 48"
       >
-        <circle cx="24" cy="24" r="24" fill="#181818" transform="matrix(-1 0 0 1 48 0)" />
+        <circle
+          cx="24"
+          cy="24"
+          r="24"
+          fill="#181818"
+          transform="matrix(-1 0 0 1 48 0)"
+        />
         <path fill="#ffffff" d="m18 24 7.5 6.062V17.938z" />
       </svg>
     </button>
