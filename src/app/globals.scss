@@ -9,6 +9,7 @@
   --color-blue: #0a66dd;
   --color-blue-light: #f0f7fb;
   --color-light: #f8f8f8;
+  --color-grey: #dde2ed;
 
   @media (min-width: 768px) {
     --container-padding-x: 40px;
@@ -209,6 +210,19 @@ main {
   max-width: 1920px;
 }
 
+.section-pt {
+  margin-top: 110px;
+  @media (min-width: 768px) {
+    margin-top: 120px;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 130px;
+  }
+  @media (min-width: 1300px) {
+    margin-top: 150px;
+  }
+}
+
 // ==================== Текст ====================
 .h1 {
   font-size: 32px;
@@ -281,4 +295,28 @@ main {
   flex: 0 0 100%;
   min-width: 0;
   user-select: none;
+}
+.embla__dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-white);
+  border-radius: 6px;
+}
+.embla__dot--selected {
+  background-color: var(--color-blue);
+}
+
+.dotsLg {
+  .dot {
+    height: 10px;
+    background-color: var(--color-grey);
+    flex-grow: 1;
+  }
+  .dotSelected {
+    background-color: var(--color-blue);
+  }
+}
+
+.blue {
+  color: var(--color-blue);
 }

@@ -1,12 +1,18 @@
 'use client'
-import { DotButton, useDotButton } from '@/components/ui/carousel/dot-buttons'
 import styles from './index.module.scss'
 import useEmblaCarousel from 'embla-carousel-react'
 import { JSX } from 'react'
 import clsx from 'clsx'
+import { DotButton, useDotButton } from '@/components/ui/carousel/dot-buttons'
+import AutoScroll from 'embla-carousel-auto-scroll'
 
 export function Carousel({ slides }: { slides: JSX.Element[] }) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({})
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    active: true,
+    breakpoints: {
+      '(min-width: 767px)': { active: false },
+    },
+  })
 
   const { selectedIndex, scrollSnaps } = useDotButton(emblaApi)
 
@@ -18,7 +24,23 @@ export function Carousel({ slides }: { slides: JSX.Element[] }) {
 
       <div className={styles.dots}>
         {scrollSnaps.map((_, index) => (
-          <DotButton key={index} className={clsx('embla__dot', index === selectedIndex && ' embla__dot--selected')} />
+          <DotButton key={index} className={clsx('embla__dot', index === selectedIndex && 'embla__dot--selected')} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export function CarouselLoop({ slides, className }: { slides: string[]; className?: string }) {
+  const [emblaRef] = useEmblaCarousel({ loop: true, watchDrag: false }, [AutoScroll()])
+
+  return (
+    <div className={clsx('embla', className)} ref={emblaRef}>
+      <div className="embla__container">
+        {slides.map((text, index) => (
+          <div className={clsx(styles.slideTag, 'embla__slide subtitle')} key={index}>
+            {text}
+          </div>
         ))}
       </div>
     </div>
