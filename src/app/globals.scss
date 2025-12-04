@@ -299,15 +299,37 @@ b {
   min-width: 0;
   user-select: none;
 }
+
+.embla__dots {
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+  margin-top: 14px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
 .embla__dot {
   width: 8px;
   height: 8px;
   background-color: var(--color-white);
   border-radius: 6px;
+  transition: background-color 0.2s ease-out;
 }
 .embla__dot--selected {
   background-color: var(--color-blue);
 }
+.embla__dots--lg {
+  .embla__dot {
+    height: 10px;
+    background-color: var(--color-grey);
+    flex-grow: 1;
+  }
+  .embla__dot--selected {
+    background-color: var(--color-blue);
+  }
+}
+
 .embla__buttons {
   display: flex;
   justify-content: center;
@@ -360,17 +382,6 @@ b {
   left: -100%;
 }
 
-.dotsLg {
-  .dot {
-    height: 10px;
-    background-color: var(--color-grey);
-    flex-grow: 1;
-  }
-  .dotSelected {
-    background-color: var(--color-blue);
-  }
-}
-
 .blue {
   color: var(--color-blue);
 }
@@ -387,5 +398,11 @@ b {
   margin-bottom: 64px;
   @media (min-width: 768px) {
     margin-bottom: 72px;
+  }
+  p {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    margin-top: 32px;
   }
 }

@@ -16,7 +16,14 @@
   display: flex;
   flex-direction: column;
   border-radius: 24px;
-  background: linear-gradient(175.32deg, #0371ff 3.75%, #2c90ff 23.15%, #4abaff 48.97%, #7dd6ff 67.63%, #d8f8ff 98.28%);
+  background: linear-gradient(
+    175.32deg,
+    #0371ff 3.75%,
+    #2c90ff 23.15%,
+    #4abaff 48.97%,
+    #7dd6ff 67.63%,
+    #d8f8ff 98.28%
+  );
   color: var(--color-white);
   padding: 24px 0 20px;
   height: 100%;
@@ -102,13 +109,6 @@
   }
   @media (min-width: 1440px) {
     flex: 0 0 328px;
-  }
-}
-
-.dots {
-  margin-top: 14px;
-  @media (min-width: 768px) {
-    display: none !important;
   }
 }
 

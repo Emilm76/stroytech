@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.scss'
 import { ReactNode } from 'react'
+import ReactLenis from 'lenis/react'
 
 const InterFont = Inter({
   subsets: ['cyrillic', 'latin'],
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={InterFont.className}>{children}</body>
+      <body className={InterFont.className}>
+        <ReactLenis root />
+        {children}
+      </body>
     </html>
   )
 }

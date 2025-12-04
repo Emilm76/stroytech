@@ -1,15 +1,15 @@
 import { FeaturesSection } from '@/components/sections/features'
 import { Footer } from '@/components/sections/footer'
+import { LMSSection } from '@/components/sections/lms'
 import { MainSection } from '@/components/sections/main'
 import { MentorsSection } from '@/components/sections/mentors'
-import ReactLenis from 'lenis/react'
 
 export default function Home() {
   return (
     <>
-      <ReactLenis root />
       <main>
         <MainSection />
+        <LMSSection />
         <FeaturesSection />
         <MentorsSection />
       </main>

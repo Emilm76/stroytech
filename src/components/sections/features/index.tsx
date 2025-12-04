@@ -14,14 +14,14 @@ import { useRef } from 'react'
 import { Carousel } from './carousel'
 import clsx from 'clsx'
 
-type slide = {
+type Slide = {
   img: StaticImageData
   title: string
   subtitle: string
   description: string
 }
 
-const slides: slide[] = [
+const slides: Slide[] = [
   {
     img: Bg1Img,
     title: 'AmoCRM',
@@ -106,7 +106,7 @@ export function FeaturesSection() {
   )
 }
 
-function Feature({ data }: { data: slide }) {
+function Feature({ data }: { data: Slide }) {
   const slide = useRef<HTMLDivElement>(null)
   const descWrap = useRef<HTMLDivElement>(null)
   const desc = useRef<HTMLParagraphElement>(null)
