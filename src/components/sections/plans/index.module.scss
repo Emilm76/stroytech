@@ -1,0 +1,81 @@
+.wrapper {
+  position: relative;
+  margin: 0 calc(var(--container-padding-x) * -1);
+  background-color: var(--color-light);
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+}
+
+.imgBg {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.content {
+  position: relative;
+  z-index: 5;
+  color: var(--color-white);
+  padding: 0 var(--container-padding-x);
+  padding-top: 64px;
+  padding-bottom: 30px;
+  max-width: 514px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    padding: 100px 0 48px;
+  }
+  @media (min-width: 1024px) {
+    padding: 110px 0 64px;
+    max-width: 667px;
+  }
+  @media (min-width: 1440px) {
+    padding: 120px 0 64px;
+  }
+
+  h2 {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  p {
+    margin-top: 32px;
+  }
+}
+
+.textWrap {
+  position: relative;
+  transition: height 0.3s ease-out;
+  min-height: 180px;
+}
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.tabsList {
+  display: flex;
+  gap: 9px;
+  scrollbar-width: none;
+  overflow-x: auto;
+  margin: 0 calc(var(--container-padding-x) * -1);
+  padding: 0 var(--container-padding-x);
+  margin-top: 64px;
+  @media (min-width: 768px) {
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+    justify-content: center;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 72px;
+  }
+}
