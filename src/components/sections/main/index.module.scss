@@ -1,7 +1,8 @@
 .section {
   padding: 16px;
-  min-height: 750px;
   height: 100vh;
+  min-height: 740px;
+  max-height: 900px;
   @media (min-width: 768px) {
     padding: 20px;
   }
@@ -13,6 +14,7 @@
 }
 
 .wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 24px;
@@ -38,6 +40,8 @@
 }
 
 .container {
+  position: relative;
+  z-index: 2;
   max-width: 1244px;
   width: 100%;
   margin: 0 auto;
@@ -65,9 +69,14 @@
 }
 
 .title {
+  position: relative;
+  z-index: 2;
   text-align: center;
   // margin-top: 118px;
   margin-bottom: 58px;
+  @media (min-height: 800px) and (max-width: 767px) {
+    margin-bottom: 80px;
+  }
   @media (min-width: 768px) {
     // margin-top: 136px;
     margin-bottom: 48px;
@@ -114,6 +123,9 @@
 
 .carouselLoop {
   margin-top: 30px;
+  @media (min-height: 800px) and (max-width: 767px) {
+    margin-top: 40px;
+  }
   @media (min-width: 1024px) {
     margin-top: 64px;
   }
@@ -124,5 +136,119 @@
     @media (min-height: 950px) {
       margin-top: 115px;
     }
+  }
+}
+
+.capIcon {
+  position: absolute;
+  top: 7%;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  @media (min-height: 800px) and (max-width: 767px) {
+    top: 10%;
+  }
+  @media (min-width: 768px) {
+    top: 28px;
+    left: 50px;
+    width: 230px;
+    height: 230px;
+  }
+  @media (min-width: 1440px) {
+    top: 30px;
+    left: 48px;
+    width: 255px;
+    height: 255px;
+  }
+  @media (min-width: 1600px) {
+    right: 300px;
+    height: 300px;
+  }
+}
+
+.humanIcon {
+  position: absolute;
+  top: 8%;
+  right: -35px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  @media (min-height: 800px) and (max-width: 767px) {
+    top: 12%;
+  }
+  @media (min-width: 768px) {
+    top: 52px;
+    right: 12px;
+    width: 140px;
+    height: 140px;
+  }
+  @media (min-width: 1440px) {
+    top: 90px;
+    right: 15px;
+    width: 190px;
+    height: 190px;
+  }
+  @media (min-width: 1600px) {
+    top: 120px;
+    right: 58px;
+    width: 230px;
+    height: 230px;
+  }
+}
+
+.mouseIcon {
+  position: absolute;
+  top: 40%;
+  right: -35px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  @media (min-height: 800px) and (max-width: 767px) {
+    top: 46%;
+  }
+  @media (min-width: 768px) {
+    width: 140px;
+    height: 140px;
+    top: 38%;
+    right: 0;
+  }
+  @media (min-width: 1440px) {
+    top: 410px;
+    right: 50px;
+    width: 170px;
+    height: 170px;
+  }
+  @media (min-width: 1600px) {
+    top: 430px;
+    right: 10%;
+    width: 220px;
+    height: 220px;
+  }
+}
+
+.folderIcon {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 0;
+    width: 125px;
+    height: 125px;
+  }
+  @media (min-width: 1024px) {
+    top: 38%;
+    width: 145px;
+    height: 145px;
+  }
+  @media (min-width: 1440px) {
+    top: 390px;
+    width: 190px;
+    height: 190px;
+  }
+  @media (min-width: 1600px) {
+    top: 510px;
+    width: 230px;
+    height: 230px;
   }
 }
