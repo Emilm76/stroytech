@@ -1,3 +1,4 @@
+import { AboutsSection } from '@/components/sections/about'
 import { FeaturesSection } from '@/components/sections/features'
 import { Footer } from '@/components/sections/footer'
 import { LMSSection } from '@/components/sections/lms'
@@ -11,6 +12,7 @@ export default function Home() {
       <main>
         <MainSection />
         <LMSSection />
+        <AboutsSection />
         <PlansSection />
         <FeaturesSection />
         <MentorsSection />

@@ -1,0 +1,108 @@
+.whiteBlock {
+  position: relative;
+  padding: 32px;
+  border-radius: 24px;
+  background-color: var(--color-white);
+  h2 {
+    @media (min-width: 768px) {
+      max-width: 390px;
+    }
+  }
+  p {
+    margin-top: 32px;
+  }
+  h2,
+  p {
+    @media (min-width: 1024px) {
+      max-width: 56.75%;
+    }
+    @media (min-width: 1440px) {
+      max-width: 600px;
+    }
+  }
+  @media (min-width: 768px) {
+    padding: 72px 64px;
+  }
+  @media (min-width: 1024px) {
+    padding: 84px 64px 64px;
+  }
+  @media (min-width: 1440px) {
+    padding: 84px 64px;
+  }
+}
+
+.pillowImg {
+  width: 100%;
+  max-width: 274px;
+  margin: 0 auto;
+  margin-top: 24px;
+  display: block;
+  @media (min-width: 768px) {
+    position: absolute;
+    top: -104px;
+    right: 0;
+    margin: 0;
+    width: 236px;
+    height: 233px;
+    max-width: none;
+  }
+  @media (min-width: 1024px) {
+    top: 50%;
+    right: 63px;
+    translate: 0 -50%;
+    width: 288px;
+    height: 285px;
+  }
+  @media (min-width: 1440px) {
+    right: 90px;
+    width: 313px;
+    height: 309px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 10px;
+  margin-top: 24px;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (min-width: 1440px) {
+    gap: 24px;
+  }
+}
+
+.blueItem {
+  padding: 32px;
+  border-radius: 24px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  p {
+    margin-top: 32px;
+    @media (min-width: 768px) {
+      margin-top: 24px;
+    }
+    @media (min-width: 1440px) {
+      margin-top: 50px;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (min-width: 768px) {
+      grid-column: span 2;
+    }
+    @media (min-width: 1024px) {
+      grid-column: span 1;
+    }
+  }
+}

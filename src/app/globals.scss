@@ -423,3 +423,17 @@ b {
     margin-top: 32px;
   }
 }
+
+.blue-section {
+  background-color: var(--color-blue-light);
+  padding: 100px 0;
+  @media (min-width: 768px) {
+    padding: 110px 0;
+  }
+  @media (min-width: 1024px) {
+    padding: 130px 0;
+  }
+  @media (min-width: 1440px) {
+    padding: 150px 0;
+  }
+}

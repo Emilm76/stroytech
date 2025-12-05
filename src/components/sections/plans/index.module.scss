@@ -28,6 +28,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  user-select: none;
   @media (min-width: 768px) {
     padding: 100px 0 48px;
   }
