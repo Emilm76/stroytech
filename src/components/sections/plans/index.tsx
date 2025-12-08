@@ -48,11 +48,13 @@ export function PlansSection() {
         const textNodes: NodeListOf<HTMLDivElement> =
           desc.current.querySelectorAll?.(`.${styles.text}`)
 
-        const currentText = textNodes[activeSlideIndex]
+        const heightList: number[] = Array.from(textNodes).map(
+          (node) => node.offsetHeight
+        )
 
-        if (currentText) {
-          desc.current.style.height = `${currentText.offsetHeight}px`
-        }
+        const maxHeight = Math.max(...heightList)
+
+        desc.current.style.height = `${maxHeight}px`
       }
     }
 
@@ -62,10 +64,10 @@ export function PlansSection() {
     return () => {
       window.removeEventListener('resize', updateHeight)
     }
-  }, [activeSlideIndex])
+  }, [])
 
   return (
-    <section className="section-pt">
+    <section id="courses" className="section-pt">
       <div className="container">
         <div className={styles.wrapper}>
           {slides.map((slide, index) => {
@@ -103,6 +105,7 @@ export function PlansSection() {
                 return (
                   <div
                     className={clsx(
+                      styles.tab,
                       'tab subtitle',
                       activeSlideIndex === index && 'active'
                     )}

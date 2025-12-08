@@ -5,6 +5,7 @@ import { ExternalLink } from '@/components/ui/arrow-link'
 import { WriteIcon } from '@/icons/tab'
 import Image from 'next/image'
 import QrCodeImg from '@/images/qr-code.jpg'
+import { SectionLink } from '@/components/ui/section-link'
 
 export function Footer() {
   return (
@@ -15,7 +16,9 @@ export function Footer() {
             <div className={styles.mainBlock}>
               <div>
                 <LogoIcon className={styles.logo} />
-                <div className={clsx(styles.subtitle, 'subtitle')}>Нас рекомендуют друзьям</div>
+                <div className={clsx(styles.subtitle, 'subtitle')}>
+                  Нас рекомендуют друзьям
+                </div>
               </div>
               <div className={styles.links}>
                 <ExternalLink href="">Телеграмм канал платформы</ExternalLink>
@@ -24,7 +27,9 @@ export function Footer() {
 
               <a className={styles.writeBtn} href="" target="_blank">
                 <WriteIcon className={styles.writeIcon} />
-                <span className="subtitle">Есть вопрос или предложение? Напишите&nbsp;нам.</span>
+                <span className="subtitle">
+                  Есть вопрос или предложение? Напишите&nbsp;нам.
+                </span>
               </a>
             </div>
 
@@ -49,21 +54,15 @@ export function Footer() {
               <div className={styles.col}>
                 <h2 className="h4">Навигация</h2>
                 <nav>
-                  <a href="" className="link">
+                  <SectionLink href="#main" className="link">
                     Главная
-                  </a>
-                  <a href="" className="link">
+                  </SectionLink>
+                  <SectionLink href="#courses" className="link">
                     Курсы
-                  </a>
-                  <a href="" className="link">
-                    Новости
-                  </a>
-                  <a href="" className="link">
+                  </SectionLink>
+                  <SectionLink href="#team" className="link">
                     Команда
-                  </a>
-                  <a href="" className="link">
-                    Контакты
-                  </a>
+                  </SectionLink>
                 </nav>
               </div>
               <div className={styles.col}>
@@ -78,7 +77,9 @@ export function Footer() {
               © 2025 Группа компаний «ЮгСтройИнвест».{' '}
               <span className="blue">Все&nbsp;права&nbsp;защищены.</span>
             </span>{' '}
-            <span>Разработано в рамках корпоративного университета Стройтех.</span>
+            <span>
+              Разработано в рамках корпоративного университета Стройтех.
+            </span>
           </p>
         </div>
       </div>

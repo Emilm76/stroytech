@@ -51,7 +51,7 @@
 
 .textWrap {
   position: relative;
-  transition: height 0.3s ease-out;
+  //transition: height 0.3s ease-out;
   min-height: 180px;
 }
 .text {
@@ -69,14 +69,21 @@
   overflow-x: auto;
   margin: 0 calc(var(--container-padding-x) * -1);
   padding: 0 var(--container-padding-x);
-  margin-top: 64px;
+  padding-top: 64px;
   @media (min-width: 768px) {
     margin: 0;
     padding: 0;
-    margin-top: 50px;
+    padding-top: 50px;
     justify-content: center;
   }
   @media (min-width: 1024px) {
-    margin-top: 72px;
+    padding-top: 72px;
+  }
+}
+
+.tab {
+  @media (max-width: 768px) {
+    flex-grow: 1;
+    padding: 13px 24px;
   }
 }

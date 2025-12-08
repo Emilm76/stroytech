@@ -37,6 +37,13 @@
   margin: 0 auto;
   margin-top: 24px;
   display: block;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-out;
+  transition-property: rotate, scale;
+
+  rotate: none;
+  scale: 1;
+
   @media (min-width: 768px) {
     position: absolute;
     top: -104px;
@@ -58,6 +65,11 @@
     width: 313px;
     height: 309px;
   }
+
+  &:hover {
+    rotate: 16deg;
+    scale: 1.07;
+  }
 }
 
 .grid {
@@ -78,15 +90,7 @@
 }
 
 .blueItem {
-  padding: 32px;
-  border-radius: 24px;
-  background-color: var(--color-blue);
-  color: var(--color-white);
-  @media (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  position: relative;
   p {
     margin-top: 32px;
     @media (min-width: 768px) {
@@ -103,6 +107,64 @@
     }
     @media (min-width: 1024px) {
       grid-column: span 1;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    transform-origin: 80% 0;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    transition-property: translate, rotate;
+    background: radial-gradient(
+        107.79% 75.52% at 52.09% 23.51%,
+        #ccff7f 0%,
+        #8dffb9 38.62%,
+        #99ffed 87.94%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  }
+}
+
+.blueInner {
+  position: relative;
+  z-index: 5;
+  padding: 32px;
+  border-radius: 24px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  height: 100%;
+  user-select: none;
+  transform-origin: 80% 0;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transition-property: translate, rotate;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.blueItem:hover {
+  .blueInner {
+    rotate: 5.27deg;
+    translate: 14px 10px;
+    @media (min-width: 768px) {
+      rotate: 6.27deg;
+      translate: 20px 32px;
+    }
+  }
+  &::before {
+    rotate: -2.69deg;
+    translate: 0 -10px;
+    @media (min-width: 768px) {
+      rotate: -2.69deg;
+      translate: 0 -10px;
     }
   }
 }

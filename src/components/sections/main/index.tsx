@@ -10,7 +10,7 @@ import Image from 'next/image'
 
 export function MainSection() {
   return (
-    <section className={styles.section}>
+    <section id="main" className={styles.section}>
       <div className={styles.wrapper}>
         <div className={styles.logoWrap}>
           <LogoIcon className={styles.logo} />
@@ -55,6 +55,12 @@ export function MainSection() {
         <CarouselLoop
           className={styles.carouselLoop}
           slides={[
+            'Развивайся',
+            'Практикуй',
+            'Следи за прогрессом',
+            'Развивайся',
+            'Практикуй',
+            'Следи за прогрессом',
             'Развивайся',
             'Практикуй',
             'Следи за прогрессом',

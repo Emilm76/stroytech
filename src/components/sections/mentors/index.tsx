@@ -70,7 +70,8 @@ const slides = [
   {
     img: IgorImg,
     name: 'Бутко Игорь Владимирович',
-    description: 'Руководитель отдела интернет-маркетинга AmoCRM / Allio / Контроль качества',
+    description:
+      'Руководитель отдела интернет-маркетинга AmoCRM / Allio / Контроль качества',
     tag: 'Интернет-маркетинг',
   },
   {
@@ -83,7 +84,7 @@ const slides = [
 
 export function MentorsSection() {
   return (
-    <section className="section-pt">
+    <section id="team" className="section-pt">
       <div className="container">
         <h2 className="h2 section-title">Наставники</h2>
       </div>
