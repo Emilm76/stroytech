@@ -45,7 +45,7 @@ export function CarouselLoop({
   className?: string
 }) {
   const [emblaRef] = useEmblaCarousel({ loop: true, watchDrag: false }, [
-    AutoScroll(),
+    AutoScroll({ speed: 1.5 }),
   ])
 
   return (
