@@ -80,7 +80,7 @@ export function Footer() {
             </div>
 
             <div className={styles.whiteBlock}>
-              <div className={styles.col}>
+              {/* <div className={styles.col}>
                 <h2 className="h4">Контакты</h2>
                 <p>
                   <b>
@@ -96,7 +96,7 @@ export function Footer() {
                 <p>
                   <b>г. Ставрополь, ул. Павла Буравцева, 42/1</b>
                 </p>
-              </div>
+              </div> */}
               <div className={styles.col}>
                 <h2 className="h4">Навигация</h2>
                 <nav>
