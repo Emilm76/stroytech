@@ -6,12 +6,58 @@ import { WriteIcon } from '@/icons/tab'
 import Image from 'next/image'
 import QrCodeImg from '@/images/qr-code.jpg'
 import { SectionLink } from '@/components/ui/section-link'
+import { Spoiler } from './spoiler'
 
 export function Footer() {
   return (
     <footer className="section-pt">
       <div className={styles.wrapper}>
         <div className="container-lg">
+          <div className={styles.row}>
+            <Spoiler
+              title="Куратор обучения"
+              tel="+7 (918) 877-35-52"
+              text="Тарчинский Дмитрий"
+            />
+            <Spoiler
+              title="Директор по&nbsp;продажам"
+              tel="+7 (918) 873-92-71"
+              text="Гридина Анжелика"
+            />
+            <Spoiler
+              title="РОП г. Ставрополь"
+              tel="+7 961 470-75-13"
+              text="Решетникова Елена"
+            />
+            <Spoiler
+              title="РОП г. Ростов-на-Дону"
+              tel="+7 (989) 611-89-76"
+              text="Рябикина Виктория"
+            />
+          </div>
+          <div className={styles.row}>
+            <Spoiler
+              title="РОП г. Краснодар"
+              tel="+7 (964) 896-89-04"
+              text="Маковецкий Александр"
+            />
+            <Spoiler
+              title="РОП г. Краснодар"
+              tel="+7 (966) 760-99-84"
+              text="Трушинская Надежда"
+            />
+            <Spoiler
+              title="РОП г. Мариуполь"
+              tel="+7 (911) 029-13-30"
+              text="Проскурин Денис"
+            />
+            <Spoiler
+              title="РОП г. Кисловодск"
+              tel="+7 (905) 469-89-88"
+              text="Арендаренко Антонина"
+            />
+          </div>
+
           <div className={styles.grid}>
             <div className={styles.mainBlock}>
               <div>

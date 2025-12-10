@@ -429,3 +429,14 @@ b {
     padding: 150px 0;
   }
 }
+
+.label {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+  user-select: none;
+  &--blue {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+  }
+}

@@ -10,13 +10,20 @@ import EvgeniyImg from '@/images/mentors/evgeniy.jpg'
 import AfinaImg from '@/images/mentors/afina.jpg'
 import IgorImg from '@/images/mentors/igor.jpg'
 import NikitaImg from '@/images/mentors/nikita.jpg'
+import AngelicaImg from '@/images/mentors/angelica.jpg'
 import { Carousel } from './carousel'
 
 const slides = [
   {
     img: RaulImg,
-    name: 'Певадзе Рауль',
+    name: 'Певадзе Раули Зауриевич',
     description: 'Директор по продажам и маркетингу',
+    tag: 'Команда проекта',
+  },
+  {
+    img: AngelicaImg,
+    name: 'Гридина Анжелика Владимировна',
+    description: 'Директор по продажам',
     tag: 'Команда проекта',
   },
   {
@@ -24,12 +31,6 @@ const slides = [
     name: 'Мноян Геворг Артушович',
     description: 'Эксперт в сфере недвижимости ',
     tag: 'Тренер отдела продаж партнерского направления',
-  },
-  {
-    img: TatianaImg,
-    name: 'Енина Татьяна Романовна',
-    description: 'Директор по маркетингу',
-    tag: 'Команда проекта',
   },
   {
     img: DmitroImg,
@@ -79,6 +80,12 @@ const slides = [
     name: 'Цакадзе Никита Демуриевич',
     description: 'Бизнес тренер практик',
     tag: 'Тренер прямого отдела продаж',
+  },
+  {
+    img: TatianaImg,
+    name: 'Енина Татьяна Романовна',
+    description: 'Директор по маркетингу',
+    tag: 'Команда проекта',
   },
 ]
 
