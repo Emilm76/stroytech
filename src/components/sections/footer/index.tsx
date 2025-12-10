@@ -70,33 +70,15 @@ export function Footer() {
                 <ExternalLink href="">Телеграмм канал платформы</ExternalLink>
                 <ExternalLink href="">Обучающая платформа</ExternalLink>
               </div>
+            </div>
 
+            <div className={styles.whiteBlock}>
               <a className={styles.writeBtn} href="" target="_blank">
                 <WriteIcon className={styles.writeIcon} />
                 <span className="subtitle">
                   Есть вопрос или предложение? Напишите&nbsp;нам.
                 </span>
               </a>
-            </div>
-
-            <div className={styles.whiteBlock}>
-              {/* <div className={styles.col}>
-                <h2 className="h4">Контакты</h2>
-                <p>
-                  <b>
-                    <a href="tel:+78652222897">+7 (8652) 22-28-97</a>
-                  </b>{' '}
-                  - единый номер горячей линии для сотрудников и партнёров
-                </p>
-                <p>
-                  <b>
-                    <a href="mailto:mail26@usmail.ru">mail26@usmail.ru</a>
-                  </b>
-                </p>
-                <p>
-                  <b>г. Ставрополь, ул. Павла Буравцева, 42/1</b>
-                </p>
-              </div> */}
               <div className={styles.col}>
                 <h2 className="h4">Навигация</h2>
                 <nav>
